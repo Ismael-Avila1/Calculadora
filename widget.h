@@ -15,6 +15,9 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+private slots:
+    void on_btnResolver_clicked();
+
 private:
     Ui::Widget *ui;
 };
