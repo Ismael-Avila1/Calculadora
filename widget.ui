@@ -175,7 +175,17 @@
    </item>
    <item>
     <property name="text">
-     <string>Potencia</string>
+     <string>Raíz Cuadrada</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Seno</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Coseno</string>
     </property>
    </item>
   </widget>
