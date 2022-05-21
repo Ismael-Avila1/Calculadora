@@ -6,18 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>907</width>
+    <height>722</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Widget</string>
+   <string>Calculadora Mixta</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">Widget {
+	background: #D3DEDC;
+}</string>
   </property>
   <widget class="QPushButton" name="btnResolver">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>340</y>
+     <x>330</x>
+     <y>540</y>
      <width>191</width>
      <height>71</height>
     </rect>
@@ -28,6 +33,12 @@
      <pointsize>12</pointsize>
     </font>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="text">
     <string>Resolver</string>
    </property>
@@ -35,8 +46,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>70</y>
+     <x>170</x>
+     <y>270</y>
      <width>281</width>
      <height>41</height>
     </rect>
@@ -54,8 +65,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>260</y>
+     <x>170</x>
+     <y>460</y>
      <width>271</width>
      <height>31</height>
     </rect>
@@ -73,10 +84,10 @@
   <widget class="QLabel" name="labelResultado">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>470</y>
-     <width>311</width>
-     <height>61</height>
+     <x>10</x>
+     <y>660</y>
+     <width>881</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -86,14 +97,17 @@
     </font>
    </property>
    <property name="text">
-    <string>Resultado = </string>
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="inputNum1">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>70</y>
+     <x>460</x>
+     <y>270</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -108,8 +122,8 @@
   <widget class="QLineEdit" name="inputNum2">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>260</y>
+     <x>460</x>
+     <y>460</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -124,8 +138,8 @@
   <widget class="QComboBox" name="comboOpe">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>160</y>
+     <x>440</x>
+     <y>360</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -135,6 +149,9 @@
      <family>Roboto</family>
      <pointsize>12</pointsize>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <item>
     <property name="text">
@@ -165,8 +182,8 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>160</y>
+     <x>190</x>
+     <y>360</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -179,6 +196,94 @@
    </property>
    <property name="text">
     <string>Selecciona la operación:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>881</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>28</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Calculadora Mixta</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>891</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>By</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>180</y>
+     <width>891</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Avila Ismael &amp; León Jesús</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>891</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>C++ / ASM</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>
