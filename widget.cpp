@@ -19,85 +19,70 @@ Widget::~Widget()
 }
 
 
-int suma(int n1, int n2);
-int resta(int n1, int n2);
-int multiplicacion(int n1, int n2);
-int division(int n1, int n2);
-int potencia(int n1, int n2);
-
 void Widget::on_btnResolver_clicked()
 {
 
-    int num1 = ui->inputNum1->text().toInt();
-    int num2 = ui->inputNum2->text().toInt();
+    float num1 = ui->inputNum1->text().toFloat();
+    float num2 = ui->inputNum2->text().toFloat();
+    float resultado;
 
     switch(ui->comboOpe->currentIndex()) {
 
     case 0:
-        ui->labelResultado->setText("Resultado = " + QString::number(suma(num1, num2)));
+        __asm__(
+            "FLD %1;"
+            "FLD %2;"
+            "FADDP;"
+            "FSTP %0;" : "=m"(resultado) : "g"(num1), "g"(num2)
+        );
+
+        ui->labelResultado->setText("Resultado = " + QString::number(resultado));
         break;
 
     case 1:
-        ui->labelResultado->setText("Resultado = " + QString::number(resta(num1, num2)));
+        __asm__(
+            "FLD %1;"
+            "FLD %2;"
+            "FSUBP;"
+            "FSTP %0;" : "=m"(resultado) : "g"(num2), "g"(num1)
+        );
+
+        ui->labelResultado->setText("Resultado = " + QString::number(resultado));
         break;
 
     case 2:
-        ui->labelResultado->setText("Resultado = " + QString::number(multiplicacion(num1, num2)));
+        __asm__(
+            "FLD %1;"
+            "FLD %2;"
+            "FMULP;"
+            "FSTP %0;" : "=m"(resultado) : "g"(num1), "g"(num2)
+        );
+
+        ui->labelResultado->setText("Resultado = " + QString::number(resultado));
         break;
 
     case 3:
-        ui->labelResultado->setText("Resultado = " + QString::number(division(num1, num2)));
+        __asm__(
+            "FLD %1;"
+            "FLD %2;"
+            "FDIVP;"
+            "FSTP %0;" : "=m"(resultado) : "g"(num2), "g"(num1)
+        );
+
+        ui->labelResultado->setText("Resultado = " + QString::number(resultado));
         break;
 
     case 4:
-        ui->labelResultado->setText("Resultado = " + QString::number(potencia(num1, num2)));
+        __asm__(
+            "FLD %1;"
+            "FLD %2;"
+            "FADDP;"
+            "FSTP %0;" : "=m"(resultado) : "g"(num1), "g"(num2)
+        );
+
+        ui->labelResultado->setText("Resultado = " + QString::number(resultado));
         break;
     }
 
-}
-
-
-int suma(int n1, int n2) {
-    int resultado;
-
-    // __asm__();
-
-    return resultado;
-}
-
-
-int resta(int n1, int n2) {
-    int resultado;
-
-    // __asm__();
-
-    return resultado;
-}
-
-
-int multiplicacion(int n1, int n2) {
-    int resultado;
-
-    // __asm__();
-
-    return resultado;
-}
-
-
-int division(int n1, int n2) {
-    int resultado;
-
-    // __asm__();
-
-    return resultado;
-}
-
-
-int potencia(int n1, int n2) {
-    int resultado;
-
-    // __asm__();
-
-    return resultado;
 }
 
